@@ -1,0 +1,22 @@
+# Node / Expo
+node_modules/
+.expo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# C++ / CMake / Qt
+build/
+build-wasm/
+build_local/
+CMakeFiles/
+CMakeCache.txt
+*.o
+*.obj
+*.elf
+*.wasm
+*.js.map
+
+# OS
+.DS_Store
+Thumbs.db
