@@ -1,6 +1,11 @@
 # React Native Minesweeper
 
-A modern, high-performance implementation of the classic Minesweeper game built with React Native and Expo. Developed for the Mobile Developer Internship Assignment.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![React Native](https://img.shields.io/badge/Mobile-React%20Native%20%7C%20Expo-61DAFB?logo=react&logoColor=black)](#code-structure-overview)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?logo=typescript&logoColor=white)](#code-structure-overview)
+[![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android%20%7C%20Web-green.svg)](#setup-and-run-instructions)
+
+A modern, high-performance implementation of the classic **Minesweeper** game built with **React Native**, **Expo**, and **TypeScript**. Engineered with a pure reducer state architecture, non-recursive iterative BFS flood-fill, custom-synthesized 16-bit PCM audio, and 60fps Reanimated physics.
 
 ---
 
@@ -41,8 +46,8 @@ This project uses modern Expo and npm.
 ### Installation
 1. Clone the repository and navigate into the project directory:
    ```bash
-   git clone https://github.com/yigitsarpavci/react-native-minesweeper.git
-   cd react-native-minesweeper
+   git clone https://github.com/yigitsarpavci/cross-platform-game-lab.git
+   cd cross-platform-game-lab/02-react-native-minesweeper
    ```
 2. Install the dependencies:
    ```bash
@@ -121,3 +126,20 @@ The project strictly follows the **Separation of Concerns** principle, heavily d
 - **Theme Refactoring**: Refactor the hardcoded color definitions in the `Cell` component to utilize the global theme/PreferencesContext.
 - **Audio Playback Stability**: Address occasional sound errors where audio either fails to play or triggers twice.
 - **General UI Fixes**: Resolve remaining minor UI layout and rendering issues.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Related Projects
+
+Part of the **[Cross-Platform & WebAssembly Game Lab](../README.md)** suite:
+- **[01-2048-webassembly-game](../01-2048-webassembly-game)**: Cross-platform C++17 & Qt 6 implementation of 2048 compiled to WebAssembly via Emscripten ([Live Demo](https://yigitsarpavci.github.io/2048-webassembly-game/)).
+
+---
+
+*Developed by Yiğit Sarp Avcı*

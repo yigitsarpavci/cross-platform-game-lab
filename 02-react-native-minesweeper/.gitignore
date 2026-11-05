@@ -44,3 +44,6 @@ example
 
 # IDE config
 .vscode/
+
+# Local archive docs
+docs/
