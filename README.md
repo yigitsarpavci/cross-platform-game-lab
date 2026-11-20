@@ -13,6 +13,17 @@ A curated laboratory of cross-platform game engineering architectures exploring 
 
 ---
 
+## Quick Start
+
+Play the 2048 build in the browser: **https://yigitsarpavci.github.io/cross-platform-game-lab/**
+
+```bash
+make -C 01-2048-webassembly-game test                      # C++17 engine tests (no Qt needed)
+cd 02-react-native-minesweeper && npm ci && npm test       # Minesweeper engine tests
+```
+
+---
+
 ## Lab Modules Overview
 
 | Module | Core Stack | Execution Target | Architectural & Algorithmic Highlights |
