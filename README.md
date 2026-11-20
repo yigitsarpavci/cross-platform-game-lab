@@ -1,5 +1,6 @@
 # Cross-Platform & WebAssembly Game Lab
 
+[![Security: CodeQL | Dependabot](https://img.shields.io/badge/Security-CodeQL%20%7C%20Dependabot%20%7C%20Secret%20scanning-success?logo=github)](https://github.com/yigitsarpavci/cross-platform-game-lab/security)
 [![CI](https://github.com/yigitsarpavci/cross-platform-game-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/yigitsarpavci/cross-platform-game-lab/actions/workflows/ci.yml)
 [![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B&logoColor=white)](https://isocpp.org)
 [![Qt 6](https://img.shields.io/badge/Qt-6.7-41CD52?logo=qt&logoColor=white)](https://www.qt.io)

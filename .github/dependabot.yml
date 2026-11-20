@@ -1,0 +1,19 @@
+# Monthly dependency and GitHub Actions updates, grouped to keep PR noise low.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/02-react-native-minesweeper"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    groups:
+      all-updates:
+        patterns: ["*"]
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    groups:
+      all-updates:
+        patterns: ["*"]
