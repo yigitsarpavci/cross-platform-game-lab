@@ -33,3 +33,5 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
+      - name: Bundle the app (Metro smoke test)
+        run: npx expo export --platform web --output-dir /tmp/ms-export
