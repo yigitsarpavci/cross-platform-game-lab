@@ -24,6 +24,19 @@ cd 02-react-native-minesweeper && npm ci && npm test       # Minesweeper engine 
 
 ---
 
+## Screenshots
+
+![Tour](docs/screenshots/tour.gif)
+
+| | |
+|---|---|
+| ![2048 (C++ to WebAssembly): start](docs/screenshots/2048_start.jpg) | ![2048: mid-game, score 472](docs/screenshots/2048_play.jpg) |
+| *2048 (C++ to WebAssembly): start* | *2048: mid-game, score 472* |
+| ![Minesweeper (React Native): difficulty select](docs/screenshots/ms_home.jpg) | ![Minesweeper: opened board with flood-fill](docs/screenshots/ms_play.jpg) |
+| *Minesweeper (React Native): difficulty select* | *Minesweeper: opened board with flood-fill* |
+
+---
+
 ## Lab Modules Overview
 
 | Module | Core Stack | Execution Target | Architectural & Algorithmic Highlights |
