@@ -20,3 +20,6 @@ CMakeCache.txt
 # OS
 .DS_Store
 Thumbs.db
+
+# Debug-symbol bundles from local test builds
+*.dSYM/
