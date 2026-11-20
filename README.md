@@ -1,5 +1,6 @@
 # Cross-Platform & WebAssembly Game Lab
 
+[![CI](https://github.com/yigitsarpavci/cross-platform-game-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/yigitsarpavci/cross-platform-game-lab/actions/workflows/ci.yml)
 [![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B&logoColor=white)](https://isocpp.org)
 [![Qt 6](https://img.shields.io/badge/Qt-6.7-41CD52?logo=qt&logoColor=white)](https://www.qt.io)
 [![WebAssembly](https://img.shields.io/badge/Target-WebAssembly%20(WASM)-654FF0?logo=webassembly&logoColor=white)](https://webassembly.org)
@@ -15,7 +16,7 @@ A curated laboratory of cross-platform game engineering architectures exploring 
 
 | Module | Core Stack | Execution Target | Architectural & Algorithmic Highlights |
 |---|---|---|---|
-| **[01. 2048 WebAssembly Game](./01-2048-webassembly-game)** · [Live Demo](https://yigitsarpavci.github.io/2048-webassembly-game/) | `C++17`, `Qt 6`, `Emscripten`, `CMake` | Browser (WASM Canvas) & Native Desktop | Canonical directional grid normalization, infinite undo history stack (`std::stack`), browser key-event filtering. |
+| **[01. 2048 WebAssembly Game](./01-2048-webassembly-game)** · [Live Demo](https://yigitsarpavci.github.io/cross-platform-game-lab/) | `C++17`, `Qt 6`, `Emscripten`, `CMake` | Browser (WASM Canvas) & Native Desktop | Canonical directional grid normalization, infinite undo history stack (`std::stack`), browser key-event filtering. |
 | **[02. React Native Minesweeper](./02-react-native-minesweeper)** | `React Native`, `Expo`, `TypeScript` | iOS, Android & Mobile Web | Non-recursive iterative BFS flood-fill, pure reducer state architecture (`useReducer`), safe first-click, synthesized 16-bit PCM audio, Expo haptics. |
 
 ---
@@ -66,6 +67,15 @@ npx expo start
 ```
 
 ---
+
+## Testing
+
+| Module | Command | What is covered |
+| :--- | :--- | :--- |
+| 01 2048 engine | `make test` (in `01-2048-webassembly-game`, needs only a C++17 compiler) | Slides and merges in all four directions (each tile merges at most once per move), no-op moves, spawn rules, unbounded undo history, win/game-over detection, non-square grids, animation metadata (372 checks) |
+| 02 Minesweeper engine | `npm test` (in `02-react-native-minesweeper`) | Safe first dig, mine placement, precomputed counts, iterative BFS flood-fill (300x300 board without stack overflow), flags, chording, win/loss states (14 tests) |
+
+Both run in GitHub Actions on every push. The 2048 WebAssembly demo is built and deployed to GitHub Pages by `.github/workflows/deploy-2048.yml`.
 
 ## License
 

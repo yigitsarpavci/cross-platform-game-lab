@@ -7,3 +7,4 @@ build_test/
 
 # Local archive docs
 docs/
+tests/test_engine

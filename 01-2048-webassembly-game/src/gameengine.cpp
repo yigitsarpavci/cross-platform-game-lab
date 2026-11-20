@@ -60,11 +60,17 @@ bool GameEngine::move(Direction dir) {
     };
 
     std::vector<std::vector<Tile>> newGrid(m_rows, std::vector<Tile>(m_cols));
-    
+
+    // Vertical moves slide along columns (m_cols lines of length m_rows);
+    // horizontal moves slide along rows (m_rows lines of length m_cols).
+    const bool vertical = (dir == Direction::Up || dir == Direction::Down);
+    const int lines = vertical ? m_cols : m_rows;
+    const int len = vertical ? m_rows : m_cols;
+
     // Process each line independently based on the current direction's rotation.
-    for (int c = 0; c < m_cols; ++c) {
+    for (int c = 0; c < lines; ++c) {
         std::vector<Tile> line;
-        for (int r = 0; r < m_rows; ++r) {
+        for (int r = 0; r < len; ++r) {
             int tr = r, tc = c; rotate(tr, tc);
             if (m_grid[tr][tc].value != 0) line.push_back(m_grid[tr][tc]);
         }
@@ -94,8 +100,8 @@ bool GameEngine::move(Direction dir) {
                 m_lastMoves.push_back({line[i].id, fr, fc, tr, tc, line[i].value, false});
             }
         }
-        while (merged.size() < (size_t)m_rows) merged.push_back({0, -1});
-        for (int r = 0; r < m_rows; ++r) {
+        while (merged.size() < (size_t)len) merged.push_back({0, -1});
+        for (int r = 0; r < len; ++r) {
             int tr = r, tc = c; rotate(tr, tc);
             newGrid[tr][tc] = merged[r];
         }

@@ -12,7 +12,7 @@ A high-performance, cross-platform implementation of the **2048** puzzle game, e
 
 ## Live Demo
 
-**Play in your browser:** [https://yigitsarpavci.github.io/2048-webassembly-game/](https://yigitsarpavci.github.io/2048-webassembly-game/)
+**Play in your browser:** [https://yigitsarpavci.github.io/cross-platform-game-lab/](https://yigitsarpavci.github.io/cross-platform-game-lab/)
 
 ---
 

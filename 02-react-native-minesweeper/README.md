@@ -138,7 +138,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Related Projects
 
 Part of the **[Cross-Platform & WebAssembly Game Lab](../README.md)** suite:
-- **[01-2048-webassembly-game](../01-2048-webassembly-game)**: Cross-platform C++17 & Qt 6 implementation of 2048 compiled to WebAssembly via Emscripten ([Live Demo](https://yigitsarpavci.github.io/2048-webassembly-game/)).
+- **[01-2048-webassembly-game](../01-2048-webassembly-game)**: Cross-platform C++17 & Qt 6 implementation of 2048 compiled to WebAssembly via Emscripten ([Live Demo](https://yigitsarpavci.github.io/cross-platform-game-lab/)).
 
 ---
 
