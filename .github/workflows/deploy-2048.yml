@@ -21,18 +21,18 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       
       - name: Cache Qt
         id: cache-qt
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ${{ github.workspace }}/Qt
           key: ${{ runner.os }}-qt-6.6.1-wasm-v8
           
       - name: Install Host Qt
         if: steps.cache-qt.outputs.cache-hit != 'true'
-        uses: jurplel/install-qt-action@v3
+        uses: jurplel/install-qt-action@v4
         with:
           version: '6.6.1'
           target: 'desktop'
@@ -41,7 +41,7 @@ jobs:
           
       - name: Install WASM Qt
         if: steps.cache-qt.outputs.cache-hit != 'true'
-        uses: jurplel/install-qt-action@v3
+        uses: jurplel/install-qt-action@v4
         with:
           version: '6.6.1'
           target: 'desktop'
@@ -49,7 +49,7 @@ jobs:
           dir: ${{ github.workspace }}
           
       - name: Setup Emscripten
-        uses: mymindstorm/setup-emsdk@v12
+        uses: mymindstorm/setup-emsdk@v16
         with:
           version: '3.1.37'
           
@@ -243,10 +243,10 @@ jobs:
 
 
       - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./01-2048-webassembly-game/public
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
