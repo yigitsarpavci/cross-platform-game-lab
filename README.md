@@ -74,7 +74,7 @@ npx expo start
 | Module | Command | What is covered |
 | :--- | :--- | :--- |
 | 01 2048 engine | `make test` (in `01-2048-webassembly-game`, needs only a C++17 compiler) | Slides and merges in all four directions (each tile merges at most once per move), no-op moves, spawn rules, unbounded undo history, win/game-over detection, non-square grids, animation metadata (372 checks) |
-| 02 Minesweeper engine | `npm test` (in `02-react-native-minesweeper`) | Safe first dig, mine placement, precomputed counts, iterative BFS flood-fill (300x300 board without stack overflow), flags, chording, win/loss states (14 tests) |
+| 02 Minesweeper engine | `npm run test:coverage` (in `02-react-native-minesweeper`; 100% of engine lines, gate at 90%) | Safe first dig, mine placement, precomputed counts, iterative BFS flood-fill (300x300 board without stack overflow), flags, chording, win/loss states (14 tests) |
 
 Both run in GitHub Actions on every push. The 2048 WebAssembly demo is built and deployed to GitHub Pages by `.github/workflows/deploy-2048.yml`.
 

@@ -32,6 +32,6 @@ jobs:
           cache-dependency-path: 02-react-native-minesweeper/package-lock.json
       - run: npm ci
       - run: npm run typecheck
-      - run: npm test
+      - run: npm run test:coverage
       - name: Bundle the app (Metro smoke test)
         run: npx expo export --platform web --output-dir /tmp/ms-export
